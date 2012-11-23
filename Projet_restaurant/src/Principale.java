@@ -11,7 +11,9 @@
 public class Principale {
 	public static void main(String[] args) {
 	
-
+		Cuisinier cui = new Cuisinier();
+		
+		cui.voirCommande(2);
 	}
 
 }

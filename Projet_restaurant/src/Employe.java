@@ -1,7 +1,11 @@
-
+/**
+ * Classe reprsentant un employ de restaurant
+ * @author tristanfrascari
+ * @version 1.0
+ */
 public class Employe {
 	
-	private int id;
+	protected int id;
 
 	public int getId() {
 		return id;

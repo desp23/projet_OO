@@ -82,7 +82,7 @@ public class Gerant extends Employe{
 		
 		bdd.setResultFromQuery(query);
 		try {
-			prix = Double.valueOf(bdd.result.getObject(1).toString());
+			prix = Double.valueOf(bdd.getResult().getObject(1).toString());
 		} catch (NumberFormatException e) {
 			System.err.println("Erreur NumberFormatException : "+e.getMessage());
 		} catch (SQLException e) {
