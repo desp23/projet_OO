@@ -4,14 +4,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Fenetre extends JFrame {
-	private Accueil home = new Accueil(this);
-	private Client client = new Client(this);
 	
 	public Fenetre() {
 		this.setTitle("SAGO - Système d'automatisation de gestion des opérations");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setExtendedState(this.MAXIMIZED_BOTH);
+		//this.setExtendedState(this.MAXIMIZED_BOTH);
+		this.setPreferredSize(new Dimension(1280,768));
 		this.setMinimumSize(new Dimension(1280,768));
+		Accueil home = new Accueil(this);
 		this.setContentPane(home);
 		this.setVisible(true);
 	}

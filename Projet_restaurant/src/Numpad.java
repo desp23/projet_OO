@@ -66,15 +66,14 @@ public class Numpad extends JPanel {
 	class ClrTrouve implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
-			refresh = true;
 			entreClavier.setText("");
+			entreClavier.repaint();
 		}
 	}
 
 	class EnterTrouve implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			validation();
-			refresh = true;
 			entreClavier.setText("");
 		}
 	}
