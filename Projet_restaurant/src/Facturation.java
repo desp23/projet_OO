@@ -11,14 +11,14 @@ import javax.swing.JPanel;
 public class Facturation extends JPanel {
 	private String total = "312.24";
 	private String dollar = " $";
-	/*private String[] nomBtn = { "Crédi", "Débit", "Comptant" };
-	private int[] coordXBtn = { 350, 485, 950, 950 };
-	private int[] coordYBtn = { 615, 615, 25, 145 };
-	private int[] dimensionXBtn = { 125, 125, 260, 260 };
-	private int[] dimensionYBtn = { 60, 60, 100, 100 };
+	private String[] nomBtn = { "Crédit", "Débit", "Comptant" };
+	private int[] coordXBtn = { 730, 730, 730 };
+	private int[] coordYBtn = { 250, 320, 390 };
+	private int[] dimensionXBtn = { 125, 125, 125 };
+	private int[] dimensionYBtn = { 60, 60, 60 };
 	private String[] couleurBtn = { "btn_bourgogne.png", "btn_bourgogne.png",
-			"btn_noir.png", "btn_noir.png" };
-	private Bouton[] tableauBtn = new Bouton[nomBtn.length];*/
+			"btn_bourgogne.png" };
+	private Bouton[] tableauBtn = new Bouton[nomBtn.length];
 	private Font f = new Font("Helvetica", Font.BOLD, 27);
 
 	public Facturation(Fenetre f) {
@@ -27,7 +27,7 @@ public class Facturation extends JPanel {
 		this.add(menu);
 		Numpad pad = new Numpad(f, 952, 100);
 		this.add(pad);
-		Label totalFacture = new Label(total + dollar, 625, 100, 204, 70);
+		Label totalFacture = new Label(total + dollar, 700, 100, 204, 70);
 		totalFacture.setOpaque(true);
 		totalFacture.setHorizontalAlignment(JLabel.CENTER);
 		this.add(totalFacture);
@@ -47,6 +47,14 @@ public class Facturation extends JPanel {
 		Bouton facture4 = new Bouton("4", 350, 364, 100, 100, "btn_noir.png",
 				true, Color.WHITE);
 		this.add(facture4);
+
+		for (int i = 0; i < nomBtn.length; i++) {
+			tableauBtn[i] = new Bouton(nomBtn[i], coordXBtn[i], coordYBtn[i],
+					dimensionXBtn[i], dimensionYBtn[i], couleurBtn[i], true,
+					Color.WHITE);
+			this.add(tableauBtn[i]);
+
+		}
 	}
 
 	public void paintComponent(Graphics g) {
@@ -58,9 +66,9 @@ public class Facturation extends JPanel {
 		}
 		g.setColor(Color.black);
 		g.fillRect(326, 25, 2, this.getHeight() - 75);
-		g.fillRect(640, 75, 130, 2);
+		g.fillRect(715, 90, 130, 2);
 		g.setFont(f);
-		g.drawString("Total de la facture:", 625, 75);
+		g.drawString("Total de la facture:", 675, 80);
 	}
 
 }
