@@ -17,12 +17,13 @@ public class Bouton extends JButton {
 	private Image img;
 	private Font f = new Font("Helvetica", 5, 18);
 
-	public Bouton(String str, int coordX, int coordY, int dimX, int dimY, String couleurBtn) {
+	public Bouton(String str, int coordX, int coordY, int dimX, int dimY, String couleurBtn, boolean enabled) {
 		super(str);
 		this.setBounds(coordX, coordY, dimX, dimY);
 		this.setPreferredSize(new Dimension(dimX, dimY));
 		this.name = str;
 		this.setFont(f);
+		this.setEnabled(enabled);
 		try {
 			img = ImageIO.read(new File(couleurBtn));
 		} catch (IOException e) {
