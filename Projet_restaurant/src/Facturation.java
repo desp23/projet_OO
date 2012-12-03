@@ -15,7 +15,7 @@ public class Facturation extends JPanel {
 
 	public Facturation(Fenetre f) {
 		this.setLayout(null);
-		Menu menu = new Menu(2);
+		Menu menu = new Menu(f,2);
 		this.add(menu);
 		Numpad pad = new Numpad(f, 952, 100);
 		this.add(pad);

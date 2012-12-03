@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,7 +32,7 @@ public class Numpad extends JPanel {
 		this.add(entreClavier);
 		for (int i = 0; i < nomBtn.length; i++) {
 			tableauBtn[i] = new Bouton(nomBtn[i], coordXBtn[i], coordYBtn[i],
-					dimensionXBtn[i], dimensionYBtn[i], couleurBtn, true);
+					dimensionXBtn[i], dimensionYBtn[i], couleurBtn, true, Color.WHITE);
 			switch (i) {
 			case 0:
 				tableauBtn[i].addActionListener(new ClrTrouve());

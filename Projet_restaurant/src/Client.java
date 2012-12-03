@@ -29,36 +29,36 @@ public class Client extends JPanel {
 
 	public Client(Fenetre f, String str) {
 		numTable = str;
-		Menu menu = new Menu(1);
+		Menu menu = new Menu(f, 1);
 		this.add(menu);
 		this.setLayout(null);
 		Bouton client1 = new Bouton("Client 1", 350, 55, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client1);
 		Bouton client2 = new Bouton("Client 2", 350, 125, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client2);
 		Bouton client3 = new Bouton("Client 3", 350, 195, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client3);
 		Bouton client4 = new Bouton("Client 4", 350, 265, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client4);
 		Bouton client5 = new Bouton("Client 5", 350, 335, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client5);
 		Bouton client6 = new Bouton("Client 6", 350, 405, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client6);
 		Bouton client7 = new Bouton("Client 7", 350, 475, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client7);
 		Bouton client8 = new Bouton("Client 8", 350, 545, 260, 60,
-				"btn_noir.png", true);
+				"btn_noir.png", true, Color.WHITE);
 		this.add(client8);
 		for (int i = 0; i < nomBtn.length; i++) {
 			tableauBtn[i] = new Bouton(nomBtn[i], coordXBtn[i], coordYBtn[i],
-					dimensionXBtn[i], dimensionYBtn[i], couleurBtn[i], true);
+					dimensionXBtn[i], dimensionYBtn[i], couleurBtn[i], true, Color.WHITE);
 			this.add(tableauBtn[i]);
 		}
 		List list = new List(data);

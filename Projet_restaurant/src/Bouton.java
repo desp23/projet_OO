@@ -16,16 +16,18 @@ public class Bouton extends JButton {
 	private String name;
 	private Image img;
 	private Font f = new Font("Helvetica", 5, 18);
+	private Color color;
 
-	public Bouton(String str, int coordX, int coordY, int dimX, int dimY, String couleurBtn, boolean enabled) {
+	public Bouton(String str, int coordX, int coordY, int dimX, int dimY, String nomBtn, boolean enabled, Color color) {
 		super(str);
+		this.color = color;
 		this.setBounds(coordX, coordY, dimX, dimY);
 		this.setPreferredSize(new Dimension(dimX, dimY));
 		this.name = str;
 		this.setFont(f);
 		this.setEnabled(enabled);
 		try {
-			img = ImageIO.read(new File(couleurBtn));
+			img = ImageIO.read(new File(nomBtn));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -37,7 +39,7 @@ public class Bouton extends JButton {
 				Color.cyan, true);
 		g2d.setPaint(gp);
 		g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
-		g2d.setColor(Color.white);
+		g2d.setColor(color);
 		int nameLength = g.getFontMetrics().stringWidth(name);
 		int nameHeigth = g.getFontMetrics().getHeight();
 		g2d.drawString(this.name, (this.getWidth() / 2) - (nameLength / 2),

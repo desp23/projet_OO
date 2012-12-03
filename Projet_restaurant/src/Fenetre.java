@@ -10,7 +10,7 @@ public class Fenetre extends JFrame {
 		this.setPreferredSize(new Dimension(1280,768));
 		this.setMinimumSize(new Dimension(1280,768));
 		Accueil home = new Accueil(this);
-		//Facturation facture = new Facturation(this);
+		//Plan plan = new Plan(this);
 		this.setContentPane(home);
 		this.setVisible(true);
 	}
